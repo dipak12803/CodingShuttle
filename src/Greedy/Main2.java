@@ -1,7 +1,7 @@
 package Greedy;
 
 import java.util.Arrays;
-
+//JUST CHECKING HOW TO UPDATE IN GITHUB
 public class Main2 {
     static class Activity{
         int start,finish;
