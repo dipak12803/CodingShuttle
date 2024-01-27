@@ -45,8 +45,8 @@ public class Main2 {
         int i=0,j=0;
         int count=0;
         int maxCount=0;
-        while(i<n){
-            if(arr[i]<=dep[i]){
+        while(i<n && j<n){
+            if(arr[i]<=dep[j]){
                 count++;
                 maxCount=Math.max(maxCount,count);
                 i++;

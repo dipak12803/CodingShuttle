@@ -61,7 +61,7 @@ public class EXP1 {
         salary = basic[pos] + hra[pos] + it[pos] + da;
 
 
-        System.out.println("Emp no\t\tEmployee Name\t\tDeaprtment\t\tDesignation\t\tSalary");
+        System.out.println("Emp no\t\tEmployee Name\t\tDepartment\t\tDesignation\t\tSalary");
         System.out.println(empid[pos] + "\t\t\t" + empName[pos] + "\t\t\t" + depName[pos] + "\t\t\t" + desg + "\t\t" + salary);
     }
 
