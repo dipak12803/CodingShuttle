@@ -7,10 +7,12 @@ public class Hashing3 {
 //        int[] a={1,4,-5,2,3,-3};
 //        System.out.println(countSubArraywithZeroSum(a));
 //        System.out.println(countSubArraywithGivenSum(a,5));
-
-        int[] arr={1,0,-1,0,-2,2};
-        int sum=0;
-        System.out.println(findAllQuadrupleswithGivenSum(arr,sum));
+            int[] arr={1,2,3};
+            int sum=3;
+        System.out.println(countSubArraywithGivenSum(arr,sum));
+//        int[] arr={1,0,-1,0,-2,2};
+//        int sum=0;
+//        System.out.println(findAllQuadrupleswithGivenSum(arr,sum));
     }
     static int countSubArraywithZeroSum(int[] a){
          Set<Integer> set=new HashSet<>();
