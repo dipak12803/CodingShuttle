@@ -1,8 +1,5 @@
 package JAVA_Sem6;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
 import java.util.*;
 
 public class Exp1_4LAB {
@@ -16,28 +13,29 @@ public class Exp1_4LAB {
         int cardSum=0;
         Map<Character, List<Integer>> cardMap=new HashMap<>();
         for(int i=0;i<numCards;i++){
+            System.out.println("Enter card :"+(i+1));
             c=in.next().charAt(0);
             cardNumber=in.nextInt();
             cardSum+=cardNumber;
             l=cardMap.getOrDefault(c,new ArrayList<>());
             l.add(cardNumber);
             cardMap.put(c,l);
-
-
-        }
-
-        for(Map.Entry<Character, List<Integer>> entry: cardMap.entrySet()){
-            char card=entry.getKey();
-            List<Integer> value=entry.getValue();
-
-
-            System.out.println("Key :"+card+" Value : "+value);
-
         }
         System.out.println("Total sum of cards is "+cardSum);
-
-
-
+        System.out.print("Distinct cards are: ");
+        for(Map.Entry<Character, List<Integer>> entry: cardMap.entrySet()){
+            char card=entry.getKey();
+            System.out.print(card+" ");
+            List<Integer> value=entry.getValue();
+        }
+        System.out.println();
+        for(Map.Entry<Character,List<Integer>> entry:cardMap.entrySet()){
+            List<Integer> values=entry.getValue();
+            System.out.println();
+            System.out.print("Card :"+entry.getKey()+"->");
+            for(Integer value:values){
+                System.out.print(" "+ value+" ");
+            }
+        }
     }
-
 }
