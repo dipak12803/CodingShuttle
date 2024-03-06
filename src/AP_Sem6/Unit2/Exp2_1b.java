@@ -13,7 +13,7 @@ public class Exp2_1b {
         n1.right=n3;
         n2.left=n4;
         n2.right=n5;
-        System.out.println(diameterOfBinaryTree(root));
+        System.out.println("Diameter of binary tree is: "+diameterOfBinaryTree(root));
     }
     public static int diameterOfBinaryTree(TreeNode root) {
         if(root==null) return 0;

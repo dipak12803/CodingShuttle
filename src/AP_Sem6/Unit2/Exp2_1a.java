@@ -26,7 +26,6 @@ public class Exp2_1a {
 
         return checkSymmetricHelper(l.left,r.right) && checkSymmetricHelper(l.right,r.left);
     }
-
     public static boolean isSymmetric(TreeNode root) {
         if(root==null) return false;
         else{
