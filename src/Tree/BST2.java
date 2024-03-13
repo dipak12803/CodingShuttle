@@ -21,13 +21,19 @@ public class BST2 {
         n5.right=n8;
 
 //        System.out.println(validBST(root,Integer.MIN_VALUE,Integer.MAX_VALUE));
-        Node pred=inorderPredecessor(root,10,null);
-        if(pred==null){
-            System.out.println("Predecessor not found");
-        }else{
+//        Node pred=inorderPredecessor(root,10,null);
+//        if(pred==null){
+//            System.out.println("Predecessor not found");
+//        }else{
+//
+//        System.out.println(pred.data);
+//        }
 
+//  by the method of striver
+        Node pred=inorderPredecessor(root,new Node(7));
         System.out.println(pred.data);
-        }
+
+
     }
     static boolean validBST(Node root,int min,int max){
         if(root==null) return true;
@@ -75,6 +81,21 @@ public class BST2 {
             }
         }
         return successor;
+    }
+    static Node inorderPredecessor(Node root,Node target){
+        Node predecessor=null;
+        while(root!=null){
+            //if target is less than or equal to root than predecessor must be in left
+            if(target.data<=root.data){
+                root=root.left;
+            }
+            else{  //when target is greater than root
+                //it means the predecessor may be root but still check in right
+                predecessor=root;
+                root=root.right;
+            }
+        }
+        return predecessor;
     }
 
 }
